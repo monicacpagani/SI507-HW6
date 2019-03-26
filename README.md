@@ -81,7 +81,8 @@ Some JavaScript code
 
 Commenting out in JavaScript may be coded as follows:
 
-```// INSERT COMMENT
+```js
+// INSERT COMMENT
 ```
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
@@ -91,30 +92,36 @@ It appears by simply clicking on the html files will render/run the code in a we
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 
 There appears to be two kinds of 'print functions' that occur in javascript. The first appears to be the alert way, which is shown as follows:
-```alert("hello");
+```js
+alert("hello");
 ```
 The second appears to be the console.log method which appears as follows:
-```console.log("hello in console");
+```js
+console.log("hello in console");
 ```
 While both allow for output to be shown, console.log may be helpful when looking at the inspect/web developer view in the web browser. While the alert way seems to render output in the popup window.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
 
 It appears that the alert function in line 12
-```alert("hello");
+```js
+alert("hello");
 ```
 would be responsible for the pop up box. Commenting that line out appears to remove the pop-up window. TO build a pop-up with the dat and the time, the following code appears to do this task:
-```alert(new Date())
+```js
+alert(new Date())
 ```
 Please note that in order for these changes to be applied the page much be refreshed.
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
 
 The function starting in line 16 provides a subsequent line that is as follows:
-```	document.querySelector('h1').innerHTML = "A Name";
+```js
+document.querySelector('h1').innerHTML = "A Name";
 ```
 Changing this line by editing the "A Name" in quotes within the function will allow the text to be changed in this case, I will change A Name to Monica Pagani, as such:
-```	document.querySelector('h1').innerHTML = "Monica Pagani";
+```js
+document.querySelector('h1').innerHTML = "Monica Pagani";
 ```
 Please note that in order for these changes to be applied the page much be refreshed.
 
@@ -131,14 +138,15 @@ The above line of code reads all the tags within the html. Specifically, the que
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
 
 In line 22 the code as follows appears responsible for setting the visible lime green background.
-```body.style.background = "#CCEE00";
+```js
+body.style.background = "#CCEE00";
 ```
 When commenting this line out and refreshing the page, the background appears white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
 The text box that originally appear in grey are associated with the color and boarder specifications occurring in line 38-42. To change the color to blue, you can adjust the background specifications as follows:
-```
+```js
 background-color: #3399ff;
 // green #b3b3b3
 // blue  #3399ff
@@ -147,7 +155,7 @@ background-color: #3399ff;
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
 
 In order to get a text pop-up when hovering over the text McGill University, I did some googling in order to find out what the proper terminology was for that instance. I first read about things like tooltip and mouseover. After some reading, I made the following changes in order to get the Oh, Canada text to hover over McGill.
-```
+```js
 <li><div title="O Canada">McGill University</div></li>
 ```
 
@@ -171,7 +179,7 @@ In this block of code it appears that the function is applied to the instance of
 
 The follow code is associated with the Spring Equinox button per the specifications of the problem. It may also be found in the code.
 
-```
+```js
 function springClick(){
 	alert("March 20, 2019");
 }
@@ -179,7 +187,7 @@ function springClick(){
 .
 .
 .
-```
+```js
 <button onclick=springClick() id="spring-button">Spring Equinox 2019</button>
 ```
 
