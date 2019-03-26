@@ -25,7 +25,7 @@ This experience is *not in any way* about becoming an expert JavaScript programm
 
 ### Specifically
 
-Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give. 
+Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give.
 
 **To complete and submit this assignment, you should:**
 
@@ -46,7 +46,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * In answering questions, assume all of the questions include a *explain briefly* note -- you do NOT have to, and should not, write extended paragraphs. Be as concise as you can and explain in your own words. Don't worry about "whether it's enough" -- just worry about conveying your understanding so you can read it later, or even give it to someone else, and the answers will help/make sense.
 
-* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours. 
+* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours.
 
 * **For grading:** we are grading on...
 	* Following the instructions
@@ -57,7 +57,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this: 
+* Like this:
 * **Jackie Cohen (jczetta)**
 * Yea-Ree Chang (cyearee)
 * Ruchi Ookalkar (ruchido)
@@ -79,27 +79,77 @@ Some JavaScript code
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
 
-The comment code is done via the "//"
+Commenting out in JavaScript may be coded as follows:
+
+```// INSERT COMMENT
+```
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
 
+It appears by simply clicking on the html files will render/run the code in a web browser, demonstrating the viewable results of the code.
+
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+
+There appears to be two kinds of 'print functions' that occur in javascript. The first appears to be the alert way, which is shown as follows:
+```alert("hello");
+```
+The second appears to be the console.log method which appears as follows:
+```console.log("hello in console");
+```
+While both allow for output to be shown, console.log may be helpful when looking at the inspect/web developer view in the web browser. While the alert way seems to render output in the popup window.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
 
+It appears that the alert function in line 12
+```alert("hello");
+```
+would be responsible for the pop up box. Commenting that line out appears to remove the pop-up window. TO build a pop-up with the dat and the time, the following code appears to do this task:
+```alert(new Date())
+```
+Please note that in order for these changes to be applied the page much be refreshed.
+
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+
+The function starting in line 16 provides a subsequent line that is as follows:
+```	document.querySelector('h1').innerHTML = "A Name";
+```
+Changing this line by editing the "A Name" in quotes within the function will allow the text to be changed in this case, I will change A Name to Monica Pagani, as such:
+```	document.querySelector('h1').innerHTML = "Monica Pagani";
+```
+Please note that in order for these changes to be applied the page much be refreshed.
 
 * **What does the word `document` represent in this code? Explain briefly.**
 
-* **What is happening in line 12 ( 
+The word document appears first n line 17. It seems to be referenced in a similar what to an object/self in a class definition. Within this code document appears to have methods applied to in in a similar way to an object.  
+
+* **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
+The above line of code reads all the tags within the html. Specifically, the querySelector() method returns the first element that matches a specified CSS selector of an element. Additionally getElementsByTagName() returns a collection of an elements's child elements with the associated tag name. This occurs as a NodeList object.
+
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+
+In line 22 the code as follows appears responsible for setting the visible lime green background.
+```body.style.background = "#CCEE00";
+```
+When commenting this line out and refreshing the page, the background appears white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
+The text box that originally appear in grey are associated with the color and boarder specifications occurring in line 38-42. To change the color to blue, you can adjust the background specifications as follows:
+```
+background-color: #3399ff;
+// green #b3b3b3
+// blue  #3399ff
+```
+
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
+In order to get a text pop-up when hovering over the text McGill University, I did some googling in order to find out what the proper terminology was for that instance. I first read about things like tooltip and mouseover. After some reading, I made the following changes in order to get the Oh, Canada text to hover over McGill.
+```
+<li><div title="O Canada">McGill University</div></li>
+```
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -108,17 +158,30 @@ function handleClick(){
 	alert("hello");
 }
 ```
+There appears to be a function defined such that when something is clicked the hello text pop-up is rendered as demonstrated by the above code.
+
 **and**
 
 ```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
-
-
+In this block of code it appears that the function is applied to the instance of the wow button such that the button's onclick variable has a value of the above function. Simply put, when the wow button is clicked, the handleClick() function is run, and the alert('hello') is rendered via the text pop-up.
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
 
+The follow code is associated with the Spring Equinox button per the specifications of the problem. It may also be found in the code.
 
+```
+function springClick(){
+	alert("March 20, 2019");
+}
+```
+.
+.
+.
+```
+<button onclick=springClick() id="spring-button">Spring Equinox 2019</button>
+```
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
