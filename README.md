@@ -197,18 +197,47 @@ function springClick(){
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
+It appears that the code contains the specifications for errors to appear in red and valid input to appear in blue based on the following code specifications for text style:
+```js
+<style type="text/css">
+    .error{
+        color: red;
+    }
+    .good {
+        color: blue;
+    }
+```
+
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
+This statement is associated with regular expression term. For the purposes of this example, it appears to include all alphabetical letters (lower and upper case) text. I did not do any substantial researching to provide the above answer.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
+It appears that the following code is a working example of conditional statements in javascript:
+```js
+if(regex.test(currentValue) == false){
+		$("#result").html('<p class="error">Not valid!</p>').show().fadeOut(10000);
+		// Preventing form submission
+		event.preventDefault();
+} else {
+		$("#result").html('<p class="good">Nice!</p>').show().fadeOut(10000);
+}
+```
+While there does appear to be some noticeable differences in syntax, overall structure appears quite similar. In both python and javascript cases the if and else conditional statements are followed by the indented actionable code. One contrast appears to be the use of {} brackets to break up the if and else conditional statements.
+
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
+I would guess the fadeout specifies the number of milliseconds that it takes the "Not valid!" text to fade away when invalid input is submitted in the text box.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
 ```js
-$(document).ready(function(){
-    $("form").submit(function(event){
+$(document).ready(function()
+$("form").submit(function(event)
 ```
+
+To me it seems as though this code works to first prepare the document and then applies a function for the purposes of the form. In the second line it seems as though the function is invoked on the submission via the function(event) part.
 
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
