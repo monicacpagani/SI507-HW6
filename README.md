@@ -58,12 +58,11 @@ Below are a bunch of questions and indications of things to do. For each indicat
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
 * Like this:
-* **Jackie Cohen (jczetta)**
-* Yea-Ree Chang (cyearee)
-* Ruchi Ookalkar (ruchido)
-* Innocent Obi (innoobi)
-* Zhen Wang (alejwang)
-* etc.
+* **Monica Pagani (mpagani)**
+* Sabah Pirani (sabahp) - did questions together in class
+* Heather Shoecraft (hnhampt) - did questions together in class
+* Alissa Graff (amichalg) - helped explain the final question to me
+
 
 ## Questions & code instructions
 
@@ -228,7 +227,7 @@ While there does appear to be some noticeable differences in syntax, overall str
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
 
-I would guess the fadeout specifies the number of milliseconds that it takes the "Not valid!" text to fade away when invalid input is submitted in the text box.
+I would guess the fadeout specifies the number of milliseconds that it takes the "Not valid!" or "Nice!" text to fade away when invalid input is submitted in the text box.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
@@ -242,3 +241,5 @@ To me it seems as though this code works to first prepare the document and then 
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
+
+Please refer to lines 17-32 for applicable changes per the specifications of the problem.
